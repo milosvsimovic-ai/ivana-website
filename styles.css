@@ -451,69 +451,15 @@ main {
 }
 
 .vienna-image {
-  position: relative;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.16)),
-    linear-gradient(180deg, #f1e1c9 0%, #f9d49b 50%, #bf7d46 100%);
+  background: #f7e7d3;
 }
 
-.dome {
-  position: absolute;
-  left: 35%;
-  bottom: 44px;
-  width: 190px;
-  height: 150px;
-  border-radius: 50% 50% 10% 10%;
-  background: linear-gradient(90deg, #7f8f8f, #c9d3cc, #617374);
-  border: 4px solid rgba(255, 255, 255, 0.5);
-}
-
-.dome::before {
-  content: "";
-  position: absolute;
-  left: 82px;
-  top: -90px;
-  width: 22px;
-  height: 96px;
-  background: #4e4439;
-  border-radius: 12px 12px 0 0;
-}
-
-.tower {
-  position: absolute;
-  bottom: 42px;
-  width: 58px;
-  height: 250px;
-  background: linear-gradient(#523927 0 8%, #efe4d0 8% 82%, #5a3d28 82%);
-}
-
-.tower::before {
-  content: "";
-  position: absolute;
-  left: 14px;
-  top: -90px;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 92px solid #34271e;
-}
-
-.tower-left {
-  left: 17%;
-}
-
-.tower-right {
-  right: 16%;
-  height: 220px;
-}
-
-.city-line {
-  position: absolute;
-  inset: auto 0 0;
-  height: 86px;
-  background:
-    repeating-linear-gradient(90deg, #7b5538 0 34px, #946844 34px 44px, #6b4831 44px 76px),
-    linear-gradient(#b17348, #6f442e);
-  opacity: 0.92;
+.vienna-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
 }
 
 .centered {
