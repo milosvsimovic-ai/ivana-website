@@ -11,6 +11,102 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-map-pin" viewBox="0 0 24 24">
+        <path d="M12 21s7-5.4 7-12a7 7 0 0 0-14 0c0 6.6 7 12 7 12Z" />
+        <circle cx="12" cy="9" r="2.4" />
+      </symbol>
+      <symbol id="icon-language" viewBox="0 0 24 24">
+        <path d="M4 5h8M8 3v2m3 0c-.7 3.8-3 6.7-7 8" />
+        <path d="M5 9c1.2 1.8 3.2 3.2 6 4" />
+        <path d="M14 20l4-9 4 9m-6.6-3h5.2" />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24">
+        <path d="m12 3 2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.9-5.4 2.9 1-6-4.3-4.2 6-.9L12 3Z" />
+      </symbol>
+      <symbol id="icon-stethoscope" viewBox="0 0 24 24">
+        <path d="M6 4v5a5 5 0 0 0 10 0V4" />
+        <path d="M16 9v5a4 4 0 0 0 8 0v-1" />
+        <circle cx="22" cy="12" r="2" />
+        <path d="M4 4h4m6 0h4" />
+      </symbol>
+      <symbol id="icon-handshake" viewBox="0 0 24 24">
+        <path d="m8 12 3-3 3 3 1.5-1.5a3 3 0 0 1 4.2 0L22 12.8" />
+        <path d="m2 12.8 2.3-2.3a3 3 0 0 1 4.2 0L13 15" />
+        <path d="m7 15 3 3a2 2 0 0 0 2.8 0l4.2-4.2" />
+      </symbol>
+      <symbol id="icon-microscope" viewBox="0 0 24 24">
+        <path d="M9 3h6v4H9zM11 7v4l-4 4" />
+        <path d="M14 7v3a6 6 0 0 1-6 6H5m3 4h10" />
+        <path d="M17 12a5 5 0 0 1-5 5" />
+      </symbol>
+      <symbol id="icon-globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+      </symbol>
+      <symbol id="icon-book-open" viewBox="0 0 24 24">
+        <path d="M3 5.5A8 8 0 0 1 12 7v13a8 8 0 0 0-9-1.5Z" />
+        <path d="M21 5.5A8 8 0 0 0 12 7v13a8 8 0 0 1 9-1.5Z" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" />
+        <path d="M8 3v4m8-4v4M3 10h18" />
+      </symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21a8 8 0 0 1 16 0" />
+      </symbol>
+      <symbol id="icon-graduation" viewBox="0 0 24 24">
+        <path d="m3 8 9-4 9 4-9 4Z" />
+        <path d="M7 10v5c2.8 2 7.2 2 10 0v-5" />
+      </symbol>
+      <symbol id="icon-puzzle" viewBox="0 0 24 24">
+        <path d="M9 3h6v5a2 2 0 1 0 4 0h2v6h-5a2 2 0 1 0 0 4h5v3H3v-5h5a2 2 0 1 0 0-4H3V9h6Z" />
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3.5" />
+        <path d="M2.5 20a6.5 6.5 0 0 1 13 0" />
+        <path d="M16 6.5a3 3 0 0 1 0 5.8M18 20a5 5 0 0 0-3-4.5" />
+      </symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24">
+        <path d="M20.8 5.7a5.5 5.5 0 0 0-7.8 0L12 6.8l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 22l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z" />
+      </symbol>
+      <symbol id="icon-lightbulb" viewBox="0 0 24 24">
+        <path d="M9 18h6m-5 3h4" />
+        <path d="M8 14a6 6 0 1 1 8 0c-.8.8-1 1.6-1 2H9c0-.4-.2-1.2-1-2Z" />
+      </symbol>
+      <symbol id="icon-sprout" viewBox="0 0 24 24">
+        <path d="M12 21V10" />
+        <path d="M12 13c-5 0-7-3-7-8 5 0 7 3 7 8Z" />
+        <path d="M12 15c5 0 7-3 7-8-5 0-7 3-7 8Z" />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path d="M5.5 9h3.1v9.5H5.5Z" />
+        <circle cx="7.05" cy="5.9" r="1.55" />
+        <path d="M11.3 18.5V9h3v1.3c.5-.8 1.4-1.5 2.9-1.5 2.1 0 3.7 1.4 3.7 4.4v5.3h-3.1v-4.8c0-1.4-.5-2.3-1.7-2.3-1 0-1.5.6-1.8 1.2-.1.2-.1.5-.1.8v5.1Z" />
+      </symbol>
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+        <path d="M5.1 18.9 6 15.5a8 8 0 1 1 3.1 3Z" />
+        <path d="M9.6 8.5c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.3 0 .5-.2.7l-.4.5c.7 1.3 1.7 2.3 3 3l.5-.4c.2-.2.5-.3.8-.1l1.5.7c.3.1.4.3.4.6v.5c0 .3-.2.6-.5.7-.6.3-1.3.4-2 .3-2.7-.4-6.2-3.8-6.6-6.6-.1-.7 0-1.4.3-2Z" />
+      </symbol>
+      <symbol id="icon-viber" viewBox="0 0 24 24">
+        <path d="M8 4h8a4 4 0 0 1 4 4v5a4 4 0 0 1-4 4h-3.5L8 21v-4a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4Z" />
+        <path d="M9 8.5c3.7 0 6.5 2.8 6.5 6.5M9 11c2.2 0 4 1.8 4 4M9 13.4c.9 0 1.6.7 1.6 1.6" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m4 7 8 6 8-6" />
+      </symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="5" />
+        <circle cx="12" cy="12" r="3.5" />
+        <circle cx="16.8" cy="7.2" r=".7" />
+      </symbol>
+      <symbol id="icon-message" viewBox="0 0 24 24">
+        <path d="M4 5h16v11H8l-4 4Z" />
+      </symbol>
+    </svg>
+
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Ivana Kostic home">
         <span>Ivana Kostic, MD</span>
@@ -50,34 +146,23 @@
           </p>
 
           <div class="tags" aria-label="Profile highlights">
-            <span>Nis, Serbia</span>
-            <span>Serbian / English</span>
-            <span>Open to mentorship</span>
-            <span>Clinical exchange</span>
-            <span>Collaboration</span>
+            <span><svg><use href="#icon-map-pin"></use></svg>Nis, Serbia</span>
+            <span><svg><use href="#icon-language"></use></svg>Serbian / English</span>
+            <span><svg><use href="#icon-star"></use></svg>Open to mentorship</span>
+            <span><svg><use href="#icon-stethoscope"></use></svg>Clinical exchange</span>
+            <span><svg><use href="#icon-handshake"></use></svg>Collaboration</span>
           </div>
 
           <div class="actions">
-            <a class="button primary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-              Connect on LinkedIn
+            <a class="button primary" href="https://www.linkedin.com/in/dr-ivana-kosti%C4%87/" target="_blank" rel="noreferrer">
+              <svg class="linkedin-logo"><use href="#icon-linkedin"></use></svg>Connect on LinkedIn
             </a>
-            <a class="button secondary" href="#contact">Start a Conversation</a>
+            <a class="button secondary focus-message" href="#contactForm"><svg><use href="#icon-message"></use></svg>Start a Conversation</a>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Professional portrait illustration">
-          <div class="shape shape-one"></div>
-          <div class="shape shape-two"></div>
-          <div class="portrait-card">
-            <div class="portrait-face">
-              <span class="hair"></span>
-              <span class="glasses"></span>
-              <span class="smile"></span>
-            </div>
-            <div class="portrait-body"></div>
-          </div>
-          <span class="scribble orange"></span>
-          <span class="scribble blue"></span>
+        <div class="hero-visual" aria-label="Professional portrait of Ivana Kostic">
+          <img class="hero-portrait" src="assets/ivana-hero-section.png" alt="Ivana Kostic, MD" />
         </div>
       </section>
 
@@ -116,7 +201,7 @@
 
         <div class="feature-grid five">
           <article class="feature-card">
-            <span class="icon microscope"></span>
+            <span class="icon"><svg><use href="#icon-microscope"></use></svg></span>
             <h3>Research direction</h3>
             <p>
               I'm approaching the selection of my doctoral dissertation topic
@@ -124,7 +209,7 @@
             </p>
           </article>
           <article class="feature-card">
-            <span class="icon stethoscope"></span>
+            <span class="icon"><svg><use href="#icon-stethoscope"></use></svg></span>
             <h3>Clinical exchange</h3>
             <p>
               I'm interested in learning how different clinics, institutions
@@ -132,7 +217,7 @@
             </p>
           </article>
           <article class="feature-card">
-            <span class="icon globe"></span>
+            <span class="icon"><svg><use href="#icon-globe"></use></svg></span>
             <h3>International connections</h3>
             <p>
               I'd love to meet physicians, researchers, professors,
@@ -141,7 +226,7 @@
             </p>
           </article>
           <article class="feature-card">
-            <span class="icon book"></span>
+            <span class="icon"><svg><use href="#icon-book-open"></use></svg></span>
             <h3>Learning opportunities</h3>
             <p>
               I'm always looking for new skills, modern approaches, workshops,
@@ -150,7 +235,7 @@
             </p>
           </article>
           <article class="feature-card">
-            <span class="icon handshake"></span>
+            <span class="icon"><svg><use href="#icon-handshake"></use></svg></span>
             <h3>Future collaboration</h3>
             <p>
               I'm open to projects, research, education and initiatives that
@@ -167,11 +252,11 @@
 
         <div class="mini-layout">
           <div class="mini-grid">
-            <article>Invite me for a conversation during Vienna 2026</article>
-            <article>Suggest a mentor, clinic, professor or research group</article>
-            <article>Share an observership, fellowship or training opportunity</article>
-            <article>Explore a joint educational or research project</article>
-            <article>Introduce me to someone working in women's health</article>
+            <article><span><svg><use href="#icon-calendar"></use></svg></span>Invite me for a conversation during Vienna 2026</article>
+            <article><span><svg><use href="#icon-user"></use></svg></span>Suggest a mentor, clinic, professor or research group</article>
+            <article><span><svg><use href="#icon-graduation"></use></svg></span>Share an observership, fellowship or training opportunity</article>
+            <article><span><svg><use href="#icon-puzzle"></use></svg></span>Explore a joint educational or research project</article>
+            <article><span><svg><use href="#icon-users"></use></svg></span>Introduce me to someone working in women's health</article>
           </div>
 
           <aside class="resonates">
@@ -257,27 +342,27 @@
 
         <div class="notice-grid">
           <article>
-            <span>♡</span>
+            <span><svg><use href="#icon-heart"></use></svg></span>
             <h3>I care deeply about my work</h3>
             <p>Focus, responsibility and dedication to my patients.</p>
           </article>
           <article>
-            <span>◌</span>
+            <span><svg><use href="#icon-lightbulb"></use></svg></span>
             <h3>I love learning</h3>
             <p>Curiosity drives me. I follow modern medical trends and invest in clinical and academic growth.</p>
           </article>
           <article>
-            <span>☆</span>
+            <span><svg><use href="#icon-star"></use></svg></span>
             <h3>I leave a strong impression</h3>
             <p>Mentors and colleagues recognize my discipline, potential and commitment.</p>
           </article>
           <article>
-            <span>∞</span>
+            <span><svg><use href="#icon-users"></use></svg></span>
             <h3>I'm open-minded</h3>
             <p>I enjoy meeting new people and hearing different perspectives.</p>
           </article>
           <article>
-            <span>✦</span>
+            <span><svg><use href="#icon-sprout"></use></svg></span>
             <h3>I'm ready to grow</h3>
             <p>The right mentor, research field and connection could shape the next step.</p>
           </article>
@@ -328,18 +413,25 @@
             health or simply open to connecting, I'd be happy to hear from you.
           </p>
           <div class="actions">
-            <a class="button gold" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-              Connect on LinkedIn
+            <a class="button gold" href="https://www.linkedin.com/in/dr-ivana-kosti%C4%87/" target="_blank" rel="noreferrer">
+              <svg class="linkedin-logo"><use href="#icon-linkedin"></use></svg>Connect on LinkedIn
             </a>
-            <a class="button dark-outline" href="mailto:hello@example.com">Send a Message</a>
+            <a class="button dark-outline focus-message" href="#contactForm"><svg><use href="#icon-message"></use></svg>Send a Message</a>
           </div>
           <p class="quick">Prefer a quicker message?</p>
           <div class="socials">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://wa.me/" target="_blank" rel="noreferrer">WhatsApp</a>
-            <a href="viber://chat">Viber</a>
-            <a href="mailto:hello@example.com">Email</a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="social-link whatsapp" href="https://wa.me/381654707317" target="_blank" rel="noreferrer" aria-label="WhatsApp" title="WhatsApp" data-label="WhatsApp">
+              <svg><use href="#icon-whatsapp"></use></svg>
+            </a>
+            <a class="social-link viber" href="viber://chat?number=%2B381654707317" aria-label="Viber" title="Viber" data-label="Viber">
+              <svg><use href="#icon-viber"></use></svg>
+            </a>
+            <a class="social-link email" href="mailto:ivanakostic55@gmail.com" aria-label="Email" title="Email" data-label="Email">
+              <svg><use href="#icon-mail"></use></svg>
+            </a>
+            <a class="social-link instagram" href="https://www.instagram.com/koivanastic/" target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram" data-label="Instagram">
+              <svg><use href="#icon-instagram"></use></svg>
+            </a>
           </div>
         </div>
 
