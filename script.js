@@ -43,6 +43,29 @@ const scrollToElement = (target, focusTarget = null) => {
   }
 };
 
+const scrollToKeyboardSafeField = (field) => {
+  const viewport = window.visualViewport;
+  const viewportHeight = viewport?.height || window.innerHeight;
+  const viewportOffset = viewport?.offsetTop || 0;
+  const fieldTop = field.getBoundingClientRect().top + window.scrollY;
+  const targetTop = fieldTop - viewportOffset - viewportHeight * 0.46;
+
+  window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+};
+
+const focusFieldForKeyboard = (field) => {
+  if (!field) return;
+
+  scrollToKeyboardSafeField(field);
+  window.setTimeout(() => {
+    field.focus({ preventScroll: true });
+  }, 260);
+
+  window.setTimeout(() => {
+    scrollToKeyboardSafeField(field);
+  }, 620);
+};
+
 internalSectionLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     const hash = link.getAttribute("href");
@@ -69,7 +92,12 @@ const focusContactForm = (topic = "") => {
     topicSelect.dispatchEvent(new Event("change", { bubbles: true }));
   }
 
-  scrollToElement(nameInput || contactForm, nameInput);
+  if (nameInput) {
+    focusFieldForKeyboard(nameInput);
+    return;
+  }
+
+  scrollToElement(contactForm);
 };
 
 focusMessageLinks.forEach((link) => {
