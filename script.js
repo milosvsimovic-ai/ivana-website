@@ -3,6 +3,7 @@ const navLinks = document.querySelectorAll(".main-nav a");
 const contactForm = document.querySelector("#contactForm");
 const formNote = document.querySelector(".form-note");
 const focusMessageLinks = document.querySelectorAll(".focus-message");
+const topicLinks = document.querySelectorAll(".looking-card[data-topic]");
 const contactEmail = "ivanakostic55@gmail.com";
 
 menuToggle?.addEventListener("click", () => {
@@ -19,13 +20,32 @@ navLinks.forEach((link) => {
   });
 });
 
+const focusContactForm = (topic = "") => {
+  if (!contactForm) return;
+
+  const topicSelect = contactForm.querySelector("select[name='topic']");
+  if (topic && topicSelect) {
+    topicSelect.value = topic;
+    topicSelect.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
+  contactForm.scrollIntoView({ behavior: "smooth", block: "center" });
+  window.setTimeout(() => {
+    contactForm.querySelector("input[name='name']")?.focus();
+  }, 420);
+};
+
 focusMessageLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    contactForm?.scrollIntoView({ behavior: "smooth", block: "center" });
-    window.setTimeout(() => {
-      contactForm?.querySelector("input[name='name']")?.focus();
-    }, 420);
+    focusContactForm();
+  });
+});
+
+topicLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    focusContactForm(link.dataset.topic || "");
   });
 });
 
