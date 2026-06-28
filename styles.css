@@ -164,7 +164,7 @@ h2 {
   display: none;
   width: 44px;
   height: 44px;
-  border: 1px solid var(--line);
+  border: 0;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.68);
 }
@@ -173,7 +173,7 @@ h2 {
   display: block;
   width: 19px;
   height: 2px;
-  margin: 5px auto;
+  margin: 4px auto;
   background: var(--navy);
 }
 
@@ -1014,6 +1014,20 @@ figcaption {
   font-weight: 610;
 }
 
+.contact-copy {
+  display: grid;
+  align-content: start;
+}
+
+.contact-copy .actions {
+  margin-top: 24px;
+}
+
+.contact-copy .button {
+  width: fit-content;
+  min-width: 250px;
+}
+
 .gold {
   background: linear-gradient(120deg, #ffc45d, #ffdc8b);
   color: #071d3b;
@@ -1025,13 +1039,14 @@ figcaption {
 }
 
 .quick {
-  margin: 28px 0 10px;
+  margin: 26px 0 12px;
 }
 
 .socials {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+  align-items: center;
 }
 
 .social-link {
@@ -1207,13 +1222,13 @@ select option {
   .menu-toggle {
     display: block;
     z-index: 30;
-    border-color: transparent;
-    background: rgba(255, 235, 204, 0.82);
-    box-shadow: 0 10px 24px rgba(16, 38, 74, 0.08);
+    border: 0;
+    background: rgba(16, 38, 74, 0.92);
+    box-shadow: 0 10px 24px rgba(16, 38, 74, 0.16);
   }
 
   .menu-toggle span {
-    background: #26415f;
+    background: #fff4e7;
   }
 
   .main-nav {
@@ -1311,6 +1326,19 @@ select option {
 
   .contact-form {
     grid-template-columns: 1fr;
+  }
+
+  .contact-copy {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .contact-copy .actions {
+    justify-content: center;
+  }
+
+  .socials {
+    justify-content: center;
   }
 
   .feature-grid.six.looking-grid {
