@@ -4,6 +4,9 @@ const contactForm = document.querySelector("#contactForm");
 const formNote = document.querySelector(".form-note");
 const focusMessageLinks = document.querySelectorAll(".focus-message");
 const topicLinks = document.querySelectorAll(".looking-card[data-topic]");
+const internalSectionLinks = document.querySelectorAll(
+  "a[href^='#']:not(.focus-message):not(.looking-card)"
+);
 const contactEmail = "ivanakostic55@gmail.com";
 
 menuToggle?.addEventListener("click", () => {
@@ -20,6 +23,37 @@ navLinks.forEach((link) => {
   });
 });
 
+const getHeaderOffset = () => {
+  return (document.querySelector(".site-header")?.offsetHeight || 0) + 18;
+};
+
+const scrollToElement = (target, focusTarget = null) => {
+  const top = target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
+
+  window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  if (focusTarget) {
+    window.setTimeout(() => {
+      focusTarget.focus({ preventScroll: true });
+    }, 420);
+  }
+};
+
+internalSectionLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const hash = link.getAttribute("href");
+    const target = hash && document.querySelector(hash);
+
+    if (!target) return;
+
+    event.preventDefault();
+    document.body.classList.remove("nav-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    menuToggle?.setAttribute("aria-label", "Open menu");
+    scrollToElement(target);
+    window.history.pushState(null, "", hash);
+  });
+});
+
 const focusContactForm = (topic = "") => {
   if (!contactForm) return;
 
@@ -30,14 +64,7 @@ const focusContactForm = (topic = "") => {
     topicSelect.dispatchEvent(new Event("change", { bubbles: true }));
   }
 
-  const headerHeight = document.querySelector(".site-header")?.offsetHeight || 0;
-  const target = nameInput || contactForm;
-  const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 18;
-
-  window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
-  window.setTimeout(() => {
-    nameInput?.focus({ preventScroll: true });
-  }, 420);
+  scrollToElement(nameInput || contactForm, nameInput);
 };
 
 focusMessageLinks.forEach((link) => {
