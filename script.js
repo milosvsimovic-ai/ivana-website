@@ -24,14 +24,19 @@ const focusContactForm = (topic = "") => {
   if (!contactForm) return;
 
   const topicSelect = contactForm.querySelector("select[name='topic']");
+  const nameInput = contactForm.querySelector("input[name='name']");
   if (topic && topicSelect) {
     topicSelect.value = topic;
     topicSelect.dispatchEvent(new Event("change", { bubbles: true }));
   }
 
-  contactForm.scrollIntoView({ behavior: "smooth", block: "center" });
+  const headerHeight = document.querySelector(".site-header")?.offsetHeight || 0;
+  const target = nameInput || contactForm;
+  const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 18;
+
+  window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
   window.setTimeout(() => {
-    contactForm.querySelector("input[name='name']")?.focus();
+    nameInput?.focus({ preventScroll: true });
   }, 420);
 };
 
