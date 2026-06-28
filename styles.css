@@ -1207,13 +1207,13 @@ select option {
   .menu-toggle {
     display: block;
     z-index: 30;
-    border-color: rgba(16, 38, 74, 0.16);
-    background: var(--gold);
-    box-shadow: 0 12px 28px rgba(16, 38, 74, 0.14);
+    border-color: transparent;
+    background: rgba(255, 235, 204, 0.82);
+    box-shadow: 0 10px 24px rgba(16, 38, 74, 0.08);
   }
 
   .menu-toggle span {
-    background: var(--navy);
+    background: #26415f;
   }
 
   .main-nav {
