@@ -125,6 +125,10 @@
       <symbol id="icon-message" viewBox="0 0 24 24">
         <path d="M4 5h16v11H8l-4 4Z" />
       </symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24">
+        <path d="m21 3-8.8 18-2.1-8.1L3 9.8Z" />
+        <path d="m10.1 12.9 4.7-4.7" />
+      </symbol>
     </svg>
 
     <header class="site-header">
@@ -152,19 +156,50 @@
     <main>
       <section class="hero section-band" id="home">
         <div class="hero-copy">
-          <h1>Hi, I'm <span class="name-mark">Ivana.</span></h1>
-          <h2>I'm building my next chapter in women's health.</h2>
-          <p>
-            I'm a specialist in gynecology and obstetrics from Nis, Serbia, a
-            practicing physician, doctoral candidate and lifelong learner,
-            currently exploring the next step in my clinical, academic and
-            international journey.
+          <div class="hero-pill">
+            <img src="assets/hero-icon-location-orange.png" alt="" aria-hidden="true" />
+            FMF 2026 · Vienna
+          </div>
+          <h1>
+            Hi, I'm
+            <span class="name-mark">
+              Ivana.
+              <img
+                class="name-underline"
+                src="assets/ivana-underline-orange.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </span>
+          </h1>
+          <h2>Let's start a conversation in women's health.</h2>
+          <p class="hero-intro">
+            I'm a Gynecology &amp; Obstetrics Specialist from Niš, Serbia, Europe,
+            a PhD Candidate with a strong academic background.
           </p>
+          <p class="hero-intro">
+            I'm attending FMF 2026 in Vienna to meet colleagues, exchange ideas
+            and explore meaningful opportunities in research, education,
+            clinical exchange and international collaboration.
+          </p>
+          <div class="hero-highlights" aria-label="Professional highlights">
+            <article>
+              <img src="assets/hero-icon-stethoscope.png" alt="" aria-hidden="true" />
+              <h3>Gynecology &amp;<br />Obstetrics Specialist</h3>
+            </article>
+            <article>
+              <img src="assets/hero-icon-graduation.png" alt="" aria-hidden="true" />
+              <h3>PhD<br />Candidate</h3>
+            </article>
+            <article>
+              <img src="assets/hero-icon-award.png" alt="" aria-hidden="true" />
+              <h3>Nationally<br />Awarded Student</h3>
+            </article>
+          </div>
           <div class="hero-note">
             <p>
-              I'm attending the World Congress in Fetal Medicine 2026 in Vienna
-              to meet colleagues, exchange ideas and discover opportunities for
-              meaningful collaboration.
+              I love meeting <strong>curious, open-minded</strong> people,
+              passionate about <strong>medicine</strong> and life.
             </p>
           </div>
 
@@ -172,12 +207,12 @@
             <a class="button primary" href="https://www.linkedin.com/in/dr-ivana-kosti%C4%87/" target="_blank" rel="noreferrer">
               <svg class="linkedin-logo"><use href="#icon-linkedin"></use></svg>Connect on LinkedIn
             </a>
-            <a class="button secondary focus-message" href="#contactForm">Start a Conversation <span class="button-arrow">→</span></a>
+            <a class="button secondary focus-message" href="#contactForm">Say Hello <svg class="button-plane"><use href="#icon-send"></use></svg></a>
           </div>
 
           <div class="hero-meta" aria-label="Location and languages">
-            <span><img src="assets/icon-location-pin.png" alt="" aria-hidden="true" />Nis, Serbia</span>
-            <span><img src="assets/icon-world.png" alt="" aria-hidden="true" />Serbian · English · French · German</span>
+            <span><img src="assets/hero-icon-location.png" alt="" aria-hidden="true" />Niš, Serbia, Europe</span>
+            <span><img src="assets/hero-icon-world.png" alt="" aria-hidden="true" />Serbian · English · French · German</span>
           </div>
         </div>
 
@@ -313,30 +348,35 @@
       <section class="story split-section" id="story">
         <div class="section-copy">
           <p class="eyebrow">My story</p>
-          <h2>The path that brought me here.</h2>
           <p>
-            I chose gynecology and obstetrics because it combines knowledge,
-            responsibility, trust and some of the most meaningful moments in a
-            woman's life.
+            Medicine drew me in early — not only because of science, but because
+            of people. I became a medical doctor in 2017, and during my studies
+            I was recognized as one of the top students of my generation. That
+            period shaped the way I still approach medicine today: with
+            discipline, curiosity and a deep respect for every patient’s story.
           </p>
           <p>
-            I was among the top students of my generation and recognized for
-            academic excellence. After four years of clinical practice, I now
-            work as a gynecologist at the Health Center Nis.
+            Gynecology and obstetrics became the field where everything came
+            together for me — clinical precision, communication, trust, women’s
+            health, family, fear, hope and some of the most important moments in
+            a person’s life.
           </p>
           <p>
-            Alongside clinical work, I'm developing my academic path through
-            doctoral studies, lectures and professional writing. I am now
-            approaching the choice of my doctoral dissertation direction.
+            In May 2025, I became a specialist in gynecology and obstetrics. It
+            was not an ending, but a beginning — the point where years of
+            studying, clinical work and quiet persistence started opening into a
+            new academic and professional direction.
           </p>
-          <p class="quote-line">That is why this moment matters.</p>
+          <p>
+            Today, I’m continuing my doctoral studies, developing my research
+            path, improving my languages, learning from experienced colleagues
+            and looking for opportunities to grow through meaningful
+            professional exchange.
+          </p>
         </div>
 
-        <div class="image-panel office-image" role="img" aria-label="Doctor working at desk illustration">
-          <div class="desk"></div>
-          <div class="laptop"></div>
-          <div class="doctor-small"></div>
-          <div class="anatomy-model"></div>
+        <div class="image-panel office-image">
+          <img src="assets/story-ultrasound-portrait.png" alt="Ivana Kostic beside ultrasound equipment" />
         </div>
       </section>
 
@@ -353,7 +393,7 @@
           </figure>
           <figure>
             <span class="gallery-image speaking"></span>
-            <figcaption>Sharing knowledge</figcaption>
+            <figcaption>Sharing perspectives</figcaption>
           </figure>
           <figure>
             <span class="gallery-image clinical"></span>
@@ -365,11 +405,11 @@
           </figure>
           <figure>
             <span class="gallery-image purpose"></span>
-            <figcaption>Women's health with purpose</figcaption>
+            <figcaption>Deep connections</figcaption>
           </figure>
           <figure>
             <span class="gallery-image reading"></span>
-            <figcaption>Always learning</figcaption>
+            <figcaption>Quiet hours of growth</figcaption>
           </figure>
         </div>
       </section>
