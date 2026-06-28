@@ -24,7 +24,12 @@ navLinks.forEach((link) => {
 });
 
 const getHeaderOffset = () => {
-  return (document.querySelector(".site-header")?.offsetHeight || 0) + 18;
+  const header = document.querySelector(".site-header");
+  if (!header) return 18;
+
+  const position = window.getComputedStyle(header).position;
+  const overlapsContent = position === "fixed" || position === "sticky";
+  return (overlapsContent ? header.offsetHeight : 0) + 18;
 };
 
 const scrollToElement = (target, focusTarget = null) => {

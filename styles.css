@@ -79,8 +79,7 @@ svg {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 20;
   display: flex;
   align-items: center;
@@ -412,8 +411,8 @@ main section[id],
 }
 
 .hero .button.secondary {
-  min-width: 225px;
-  font-size: 1.28rem;
+  min-width: 250px;
+  font-size: 1.18rem;
 }
 
 .button-arrow {
@@ -437,9 +436,10 @@ main section[id],
 }
 
 .button .button-plane {
-  width: 22px;
-  height: 22px;
-  margin-left: 6px;
+  width: 32px;
+  height: 32px;
+  margin-left: 0;
+  object-fit: contain;
   stroke-width: 2.1;
 }
 
@@ -1189,9 +1189,31 @@ select option {
 }
 
 @media (max-width: 880px) {
+  .site-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: flex-end;
+    width: auto;
+    margin: 0;
+    padding: 14px 16px 0 0;
+    backdrop-filter: none;
+  }
+
+  .brand {
+    display: none;
+  }
+
   .menu-toggle {
     display: block;
     z-index: 30;
+    border-color: rgba(16, 38, 74, 0.16);
+    background: var(--gold);
+    box-shadow: 0 12px 28px rgba(16, 38, 74, 0.14);
+  }
+
+  .menu-toggle span {
+    background: var(--navy);
   }
 
   .main-nav {
@@ -1306,7 +1328,7 @@ select option {
 
 @media (max-width: 640px) {
   .site-header {
-    width: min(100% - 22px, 1360px);
+    width: auto;
   }
 
   main {
@@ -1416,15 +1438,16 @@ select option {
   }
 
   .hero-meta {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     margin-top: 12px;
   }
 
-  .hero-meta {
-    gap: 10px 0;
-  }
-
   .hero-meta span + span::before {
-    margin: 0 10px;
+    display: none;
+    content: none;
   }
 
   .feature-grid.five,
