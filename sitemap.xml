@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://drivana.me/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://drivana.me/assets/og-image.png</image:loc>
+      <image:title>Ivana Kostic, MD - Gynecology and Obstetrics Specialist</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://drivana.me/assets/ivana-hero-section.png</image:loc>
+      <image:title>Professional portrait of Ivana Kostic, MD</image:title>
+    </image:image>
+  </url>
+</urlset>
