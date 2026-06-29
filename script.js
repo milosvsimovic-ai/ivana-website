@@ -48,7 +48,8 @@ const scrollToKeyboardSafeField = (field) => {
   const viewportHeight = viewport?.height || window.innerHeight;
   const viewportOffset = viewport?.offsetTop || 0;
   const fieldTop = field.getBoundingClientRect().top + window.scrollY;
-  const targetTop = fieldTop - viewportOffset - viewportHeight * 0.46;
+  const keyboardClearance = viewportHeight * 0.25;
+  const targetTop = fieldTop - viewportOffset - viewportHeight * 0.46 + keyboardClearance;
 
   window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
 };
